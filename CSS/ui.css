@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 @font-face {src : url("../font/10year.ttf");font-family: "10year";}
+@font-face {src : url("../font/NanumBarunGothic.otf");font-family: "나눔바로고딕otf";}
+
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, del, 
 dfn, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, 
@@ -46,11 +48,12 @@ header nav{border-top: 0.5px solid white;}
 #wrap header nav ul li:hover:after{background: #DED85B;}
 /*footer*/
 footer{background:#747474;}
-footer{width: 100%; position: fixed; right: 0px; bottom: 0px; padding: 10px 20px 30px 20px; text-align: center; font-size: 12px; color: #FFFFFF;}
+footer{display: block; width: 100%; position: fixed; right: 0px; bottom: 0px; padding: 10px 20px 20px 20px; text-align: center; font-size: 12px; color: #FFFFFF;}
+
 /*container*/
 #container{width: 100%; height: 100%; position: relative;}
 #container .content{width: 100%; height: 100%; position: absolute; transition: all .5s;}
-#container .content.this{width: 100%; left: 0 !important;}
+#container .content.this{width: 100%; left: 0 !important; height: 100%; overflow: hidden; overflow-y: auto;}
 #container .content.prev{width: 100%; left: -100% !important;}
 #container .content.next{width: 100%; left: 100% !important;}
 #container .content.this:before, #container .content.this:after,
@@ -60,16 +63,24 @@ footer{width: 100%; position: fixed; right: 0px; bottom: 0px; padding: 10px 20px
 #container .content.next .conbox:before{opacity: 0; transition: all .6s; transition-delay: .3s;}
 #container .content.this .conbox:before{transform:translate3d(300px, 0, 0);}
 #container .content.this:after{transform:translate3d(-300px, 0, 0);}
-
-
-
+/*영역 전후 구분하기*/
+#container .content .conbox .content_wrap{opacity:0;}
+#container .content.this .conbox .content_wrap{padding:30px 305px 50px 305px; opacity:1; transition: all 1.7s; transition-delay:.8s;}
+/*애니메이션 효과 만들기*/
 #container .content{top:-100%; transition:all .8s;}
 #container .content:nth-of-type(2){transition-delay:.3s;}
 #container .content:nth-of-type(3){transition-delay:.6s;}
 #container .content:nth-of-type(4){transition-delay:.8s;}
 #container.start .content{top:0;}
+/*회사소개 페이지*/
+#container .content.this .conbox{max-width:1890px; margin:0 auto;} 
+.pargrph_tit{margin-bottom:50px; font-size:18px; color:#532E1C; position:relative; font-family: "나눔바로고딕otf"; letter-spacing: -2px;}
+.pargrph_tit:after{content:""; display:block; width:30px; height:2px; background:#0F0F0F; position:absolute; left:2px; bottom:-10px;}
+.text_box h3{font-size: 22px; color: #532E1C; }
+.text_box p{margin-bottom: 50px; color: #5C5C5C; line-height: 20px;}
+.text_box:nth-child(odd){text-align:left;}
+.text_box:nth-child(even){text-align:right;}
 
-.pargrph_tit{margin-bottom:100px; font-size:24px; color:#fff; z-index: 14;}
 
 #container #menu1{left: 0%; background:url(../images/main_bg4.png) repeat;}
 #container #menu2{left: 25%;background:url(../images/main_bg3.png) repeat;}
@@ -83,21 +94,30 @@ footer{width: 100%; position: fixed; right: 0px; bottom: 0px; padding: 10px 20px
 #container #menu2:after{left: 20px; top: 200px; font-size: 22px; font-weight: 40; font-family: "10year"; color: #000000; text-align: center;}
 #container #menu3:after{content:"직접 느끼고 기억을 구매할 수 있는 공간\A ‘오죽헌’"; white-space:pre;}
 #container #menu3:after{left: 20px; top: 80px; font-size: 20.5px; font-weight: 40; font-family: "10year"; color: #000000; text-align: center;}
-#container #menu4:after{content:"조선 초고의\A 성리학자 율곡 이이를 안겨준\A'몽룡실의 방'"; white-space:pre;}
+#container #menu4:after{content:"조선 최고의\A 성리학자 율곡 이이를 안겨준\A'몽룡실의 방'"; white-space:pre;}
 #container #menu4:after{left: 80px; top: 225px; font-size: 22px; font-weight: 40; font-family: "10year"; color: #000000; text-align: center;}
 
+#container .content .conbox:before{content:"";display:block; position:absolute;} 
 #container .content .conbox:before{content:""; display: block; position:relative;}  
 #container #menu2 .conbox:before{background:url(../images/main_ico_2.png) no-repeat; width:230px; height:310px; right:-60px; top:270px; background-size:100%;} 
 #container #menu3 .conbox:before{background:url(../images/main_ico_3.png) no-repeat; width:190px; height:310px; right:-90px; top:130px; background-size:100%;} 
 #container #menu4 .conbox:before{background:url(../images/main_ico_4.png) no-repeat; width:400px; height:330px; right:-20px; top:70px; background-size:100%;}
 
 
-#container .content h2{opacity:0;}
-#container .content.this h2{padding:10px 0 20px 50px; color:#000; position:relative;  font-size:20px;  opacity:1; transition:all .6s; transition-delay:1.2s;}
-#container .cotent i{opacity: 0;}
+
+
+
+
+
+/*#container .cotent i{opacity: 0;}
 #container .content.this i{display:block; width: 30px; height: 3px; margin: 10px 0px 0px 53px; background-color: #FFFFFF;  transition:all .6s; transition-delay:1.2s}
-
-
+.text_box h3{font-size: 40px; color: #d6d4d4; font-weight: 700;}
+.text_box p{margin-bottom: 50px; color: #ababab; line-height: 20px;}
+#container .content .conbox{opacity: 0;}
+#container .content .this .conbox{display: block; transition:all .6s; transition-delay:1.2s}*/
+/*#container .content.this h2{padding:10px 0 20px 50px; color:#000; position:relative;  font-size:20px;  opacity:1; transition:all .6s; transition-delay:1.2s;}
+#container .content .pargrph{opacity: 	0;}
+#container .content .this .pargrph{}*/
 
 /*#container #menu1 .this {background:url(../images/main1_bg.jpg) no-repeat; position: relative; transition:all .6s; transition-delay:1.2s}
 */
