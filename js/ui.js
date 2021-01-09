@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$("#container").addClass("start");
 	$("nav li").click(function(){
 		$("#container").css("max-width", "100%");
 		var id=$(this).attr("data-rol");
@@ -11,6 +12,7 @@ $(document).ready(function(){
 		$("#" + id).nextAll().addClass("next");    
 		//클릭한 메뉴와 매칭 되는 id의 뒤에 오는 <section> 태그는 .next 클래스를 지정한다     
 	});
+	//로고 클릭 시
 	$(".logo_box").click(function(){
 		$("nav li").removeClass("on");
 		$(".content").removeClass("prev this next");
