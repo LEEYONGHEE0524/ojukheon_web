@@ -75,13 +75,73 @@
 		  	 	<h2 id="font"class="font_2"></h2>
 		  	 	<div class="conbox"></div>
 		  	</section>
+
 		  	<section id="menu3" class="content">
 		  	 	<h2 id="font" class="font_3"></h2>
 		  	 	<div class="conbox"></div>
 		  	</section>
+
 		  	<section id="menu4" class="content">
-		  	 	<h2 id="font" class="font_4"></h2>
-		  	 	<div class="conbox"></div>
+		  	 	<div class="conbox">
+		  	 		
+		  	 		<section class="content_wrap">
+		  	 		<h2><숙박 안내사항><h2>
+		  	 		<div class="tit_img"></div>
+		  	 		<section class = "tit_wrap">
+		  	 			<h3 class="stay_tit">
+							‘몽룡실의 방’은 조선시대 최고의 성리학자 율곡 이이를 안겨준 ‘몽룡실’을 바탕으로 내부 구조를 녹여내었으며, 뒤뜰에는 검은 대나무 오죽이 즐비하고 있는 편안한 공간의 숙소입니다.
+						</h3>
+						<p class="sub_stat_tit-1">120,000원</p>
+						<p class="sub_stat_tit-2"> 판매가</p>
+						<p class="sub_stat_tit-3"> 50% 60,000원</p>
+						<p class="sub_stat_tit-4">체크인:4pm | 체크아웃:1pm</p>
+						<h4 class="sts-maintit">이메일로 예약을 받고 있습니다.</h4>
+						<form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbzkyPRLHU41fleFP6_A786AcmOUFeKqn4vV2s3m/exec" name="숙박">
+							<fieldset>
+								<legend>숙박</legend>
+								<section class="formlist">
+									<ul>
+										<li>
+											<label for="name">예약자 이름 <sup>*</sup></label>
+											<span class="inputbox"><input type="text" id="name" name="name" required placeholder="예약자 이름을 입력하여 주세요" /></span>
+										</li>
+										<li>
+											<lable for="email">확인 받을 이메일<sup>*</sup></lable>
+											<span class="inputbox"><input type="email" id="email" required placeholder="sampel@mail.com" />
+											</span>
+
+										</li>
+										<li>
+											<label for="message">예약 내용<sup>*</sup></label>
+											<span class="text_box">
+												<textarea id="message" name="message" placeholder="인원/날짜/차량여부/요청사항" required></textarea>
+											</span>
+										</li>
+									</ul>
+									<div class="btn_box">
+										<button type="submit" class="commbtngray">예약하기</button>
+									</div>
+									<div class="thankyou_message">
+										<section>
+											<h1>예약 요청이 완료되었습니다.</h1>
+											<p>확인 후 빠른 시일내에 답변 드리겠습니다.</p>
+											<div class="btn_box">
+												<a herf="#" class="commbtn gray close">닫기</a>
+											</div>
+										</section>
+									</div>
+								</section>
+							</fieldset>
+						</form>
+					</section>
+
+							
+						
+
+					</div>
+		  	 	
+		  	 		<div class="stay_box"></div>
+		  	 	</div>
 		  	 </section>
 		</section><!-- 컨텐츠가 들어갈 부분을 만들어줌>-->
 	    <footer>
@@ -94,5 +154,6 @@
 	</section>
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/ui.js"></script>
+	<script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script>
 </body>
 </html>

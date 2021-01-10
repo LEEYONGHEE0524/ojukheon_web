@@ -18,5 +18,8 @@ $(document).ready(function(){
 		$(".content").removeClass("prev this next");
 		$("#container").css("max-width", "auto");
 	});
+	$(".close").click(function(){
+		$(".thankyou_message").css("display", "none");
+	});
 });
 
