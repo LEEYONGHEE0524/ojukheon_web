@@ -78,18 +78,31 @@ footer{display: block; width: 100%; position: fixed; right: 0px; bottom: 0px; pa
 .pargrph_tit:after{content:""; display:block; width:30px; height:2px; background:#0F0F0F; position:absolute; left:2px; bottom:-10px;}
 .text_box h3{font-size: 22px; color: #532E1C; }
 .text_box p{margin-bottom: 50px; color: #5C5C5C; line-height: 20px;}
+
 .text_box:nth-child(odd){text-align:left;}
-.text_box:nth-child(even){text-align:right;}
+.text_box:nth-child(even){text-align:right;}	 	
+/*체험 페이지 */
+
+
+
+
+
+
+
+
+
+
+
 /*숙박 페이지*/
-#menu4 h2{font-size: 19px; color: #532E1C;}
-#menu4 .hotel_1 img{ width: 350px; border: 2px solid white;  }
-.stay_tit{ margin-top: -180px; padding-left: 380px; font-size: 15px; color: #F3F2DA;}
-.sub_stat_tit-1{position: relative;  padding-left: 380px; font-size: 13px; color: #F3F2DA; text-decoration: line-through; padding-top: 10px;}
-.sub_stat_tit-2{position: relative;  padding-left: 380px; font-size: 13px; color: #F3F2DA}
-.sub_stat_tit-3{position: relative;  padding-left: 380px; font-size: 14px; color: #F3F2DA;}
-.sub_stat_tit-4{position: relative;  padding-left: 380px; font-size: 17px; color: #F3F2DA;}
+#menu4 h1{font-size: 18px;}
+#menu4 h2{padding-top: 30px; font-size: 18.5px; color: #fff;}
+#menu4 h3{padding-top: 45px; font-size:16px; color: #F3F2DA; font-family: "나눔바로고딕otf"; }
+#menu4 .information{font-size: 17px; color: #F3F2DA; border-bottom: 2px solid white;}
+.price .four{text-decoration: line-through;}
+.price .five{padding-left: 23px;}
+#menu4 .price{padding-left: 83%; font-size: 17px; color: #F3F2DA;}
 #menu4 .formlist{margin-top: 20px; margin-bottom: 10px; border: 3px solid white; background:rgba(255,255,255,0.7	); border-radius: 	5px;}
-#menu4 h4{ font-size: 17px; color: #532E1C; margin-top:5%;}
+#menu4 h4{ font-size: 18px; color: #F3F2DA; margin-top:5%; font-family: "나눔바로고딕otf";}
 .formlist ul li{margin-bottom: 	15px; font-size: 80%;}
 .formlist ul li label sup{color: #ea657b;}
 .formlist ul li span{display: block;}
@@ -102,31 +115,22 @@ footer{display: block; width: 100%; position: fixed; right: 0px; bottom: 0px; pa
 .thankyou_message > section > h1{color:#59c3c3; font-size:25px; font-weight:700; margin-bottom:20px; font-family: "나눔바로고딕otf";}
 .thankyou_message > section{width:550px; margin:10% auto; padding:20px; border-radius:5px; background: #fff right bottom; background-size:240px; color:#3c4147;}
 /*숙박페이지 롤링영역*/
+.slider{ height: 700%; border-radius: 20px; overflow: hidden;}
+.slides{width: 500%;height: 320px;display: flex;}
+.slides input{display: none;}
+.slide{width: 20%;transition: 2s;}
+.slide img{width: 100%;}
+.navigation-manual{position: absolute;width: 825px;display: flex; justify-content: center;}
+.manual-btn{border: 2px solid #40d3dc;padding: 5px;border-radius: 10px;cursor: pointer;transition: 1s;}
+.manual-btn:not(:last-child){margin-right: 40px;}
+.manual-btn:hover{background: #40d3dc;}
+#radio1:checked ~ .first{margin-left: 0%;}
+#radio2:checked ~ .first{margin-left: -10%;}
 
 
 
-/*.hotel_wrap{width: 305px;height: 150px; margin:40px auto 0 auto; padding: 0 20px; position: relative;}
-.hotel_wrap >button{display: block; position: absolute; width: 20px; height: 100%; padding-top: 100px;}
-.hotel_wrap >button .roll_left{background: url(../images/left.png)no-repeat center center; background-size: 20px; left: 0;}
-.hotel_wrap >button .roll_right{background: url(../images/right.png)no-repeat center center; background-size: 20px; right: 0;*/
 
 
-
-
-
-
-/*.section input[id*="slide"]{display: none;}
-.section .slidewrap{ max-width: 1200px; margin: 0 auto; overflow: hidden; }
-.section .slidelist{white-space: nowrap; font-size: 0;}
-.section .slidelist >li{display: inline-block; vertical-align: middle; width: 100%; transition: all .5s;}
-.section .slidelist >li >a{display: block; position: relative;}
-.section .slidelist >li >a img{width: 100%;}
-.section .slidelist label{position: absolute;  top: 50%; transform: translateY(-50%); padding:50px; cursor: pointer;}
-.section .slidelist .left{ left: 30px; background: url('./images/left.png') center center / 100% no-repeat; }
-.section .slidelist .right{right: 30px; background:url('/images/right.png') center center / 100% no-repeat;}
-.section [id="slide01"]:checked ~ .slidewrap .slidelist > li{transform: translateX(0%);}
-.section [id="slide02"]:checked ~ .slidewrap .slidelist > li{transform: translateX(-100%);}
-.section [id="slide03"]:checked ~ .slidewrap .slidelist > li{transform: translateX(-200%);}*/
 
 #container #menu1{left: 0%; background:url(../images/main_bg4.png) repeat;}
 #container #menu2{left: 25%;background:url(../images/main_bg3.png) repeat;}
