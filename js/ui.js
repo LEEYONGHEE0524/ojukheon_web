@@ -21,6 +21,12 @@ $(document).ready(function(){
 	$(".close").click(function(){
 		$(".thankyou_message").css("display", "none");
 	});
+	$(".event_img1").click(function(){
+		alert("이벤트 기간이 아닙니다.");
+		});
+	$(".event_img2").click(function(){
+		alert("이벤트 기간이 아닙니다.");
+		});
 
 	
 });
